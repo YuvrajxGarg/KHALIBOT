@@ -10,7 +10,7 @@ module.exports = {
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('You do not have permissions to use this command')
         const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         if(!Member) return message.channel.send('Member is not found.')
-        if(Member.id === 'bot owner id') return message.channel.send ( ' mere papa se kya dikkat h vai terko ? ')
+        if(Member.id === 'bot owner id here') return message.channel.send ( ' mere papa se kya dikkat h vai terko ? ')
 
         if (Member === message.member) return message.channel.send("**You Cannot Mute Yourself!**")
             if (Member.roles.highest.comparePositionTo(message.guild.me.roles.highest) >= 0) return message.channel.send('**Cannot Mute This User!**')
